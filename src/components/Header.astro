@@ -3,10 +3,12 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="bg-white shadow-sm" >
-	<nav class="flex items-center justify-between px-4">
-		<h2 class="m-0 text-base"><a href="/" class="no-underline">{SITE_TITLE}</a></h2>
-		<div class="internal-links flex space-x-2">
+<header class="bg-white shadow-sm h-[120px] flex items-center">
+	<nav class="flex items-center px-4 w-full">
+		<a href="/" class="group no-underline h-[120px] cursor-pointer flex items-center mr-auto">
+			<h2 class="m-0 text-black group-hover:text-[var(--main)] text-3xl">{SITE_TITLE}</h2>
+		</a>
+		<div class="flex gap-12">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
